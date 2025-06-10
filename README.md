@@ -91,5 +91,5 @@ Cuando un pedido es confirmado:
 
 1. Cloná el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/portal-turismo.git
-   cd portal-turismo
+   git clone https://github.com/palateo8967/TurismoYa.git
+   cd TurismoYa
