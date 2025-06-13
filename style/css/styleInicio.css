@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+
+.presentacion {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/fondoTitulo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.presentacion::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Para darle un leve sombreado y que el texto se vea bien */
+}
+
+.presentacion_content {
+  position: relative;
+  z-index: 1;
+}
+
+.presentacion h1 {
+  font-size: 2.5em;
+  margin: 0 0 10px 0;
+}
+
+.presentacion p {
+  font-size: 1.2em;
+  margin: 0;
+}

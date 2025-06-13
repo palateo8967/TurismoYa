@@ -1,1 +1,0 @@
-<?php /* Registro de usuario con hash */ ?>
