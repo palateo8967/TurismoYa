@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -53,6 +55,109 @@
             <p>Encuentra los mejores paquetes turísticos para tus próximas vacaciones</p>
 
         </div>
+
+    </section>
+
+    <section class="featuresSection">
+
+        <div class="featuresContent">
+
+            <div class="textContent">
+
+                <h2>Vive experiencias únicas alrededor del mundo</h2>
+                <p>En TurismoYa creamos paquetes turísticos completos para que solo te preocupes por disfrutar. Desde
+                    vuelos y hoteles hasta excursiones y transfers, nos encargamos de cada detalle de tu viaje.</p>
+
+                <div class="featuresGrid">
+
+                    <div class="featureCard">
+
+                        <i class="fa fa-plane"></i>
+                        <p>Vuelos incluidos</p>
+
+                    </div>
+
+                    <div class="featureCard">
+
+                        <i class="fa fa-hotel"></i>
+                        <p>Hoteles seleccionados</p>
+
+                    </div>
+
+                    <div class="featureCard">
+
+                        <i class="fa fa-shield-alt"></i>
+                        <p>Transfers seguros</p>
+
+                    </div>
+
+                    <div class="featureCard">
+
+                        <i class="fa fa-map-marker-alt"></i>
+                        <p>Excursiones únicas</p>
+
+                    </div>
+
+                    <div class="featureCard">
+
+                        <i class="fa fa-user"></i>
+                        <p>Asesoría personalizada</p>
+
+                    </div>
+
+                    <div class="featureCard">
+
+                        <i class="fa fa-exchange-alt"></i>
+                        <p>Flexibilidad total</p>
+
+                    </div>
+
+                </div>
+
+                <div class="buttons">
+
+                    <button class="primaryBtn">Explorar paquetes</button>
+                    <button class="secondaryBtn">Contactar asesor</button>
+
+                </div>
+
+            </div>
+
+            <div class="imageGrid">
+
+                <div class="column column1">
+
+                    <div class="imageContainer small">
+
+                        <img src="../style/img/inicio/imagen1.png" alt="Destino 1" />
+
+                    </div>
+
+                    <div class="imageContainer large">
+
+                        <img src="../style/img/inicio/imagen2.png" alt="Destino 2" />
+
+                    </div>
+
+                </div>
+
+                <div class="column column2">
+
+                    <div class="imageContainer large">
+
+                        <img src="../style/img/inicio/imagen3.png" alt="Destino 3" />
+
+                    </div>
+
+                    <div class="imageContainer small">
+
+                        <img src="../style/img/inicio/imagen4.png" alt="Destino 4" />
+
+                    </div>
+
+                </div>
+
+            </div>
 
     </section>
 
