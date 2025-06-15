@@ -16,6 +16,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -161,6 +163,106 @@
 
     </section>
 
+    <section class="destacadosSection">
+
+        <div class="destacadosContent">
+
+            <h2 class="sectionTitle">Paquetes destacados</h2>
+
+            <div class="swiper destacadosSwiper">
+
+
+                <div class="swiper-wrapper">
+
+                    <?php
+
+                include_once '../controller/conex.php';
+
+                $sql = "SELECT 
+                     p.nombre, p.descripcion, p.precio_base_pp,
+                    p.ciudad, p.pais, p.rating,
+                    i.url_imagen AS imagenUrl
+                    FROM paquete_basico p
+                    JOIN paquete_imagenes i 
+                    ON p.id = i.paquete_id 
+                    AND i.es_principal = TRUE
+                    WHERE p.destacado = TRUE";
+
+                    $result = $conex->query($sql);
+
+                    if ($result && $result->num_rows) {
+
+                        while ($row = $result->fetch_assoc()) {
+                            
+                        ?>
+
+                    <div class="swiper-slide">
+
+                        <div class="card">
+
+                            <span class="badge">Destacado</span>
+
+                            <div class="cardImgWrapper">
+
+                                <img src="<?= htmlspecialchars($row['imagenUrl']) ?>"
+                                    alt="<?= htmlspecialchars($row['nombre']) ?>" />
+
+                            </div>
+
+                            <div class="cardBody">
+
+                                <div class="cardMeta">
+
+                                    <span class="location">
+                                        <?= htmlspecialchars($row['pais']) ?> – <?= htmlspecialchars($row['ciudad']) ?>
+                                    </span>
+
+                                    <span class="rating">★ <?= htmlspecialchars($row['rating']) ?></span>
+
+                                </div>
+
+                                <h3 class="cardTitle"><?= htmlspecialchars($row['nombre']) ?></h3>
+                                <p class="cardDesc"><?= htmlspecialchars($row['descripcion']) ?></p>
+
+                                <div class="cardFooter">
+
+                                    <span class="price">
+                                        $<?= htmlspecialchars($row['precio_base_pp']) ?> por persona
+                                    </span>
+                                    <button class="btnDetail">Ver detalle</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <?php
+          }
+
+        } else {
+
+          echo '<p class="noResults">No hay paquetes destacados disponibles.</p>';
+
+        }
+
+        $conex->close();
+
+      ?>
+                </div>
+
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/swiperInit.js"></script>
 
 
 </body>
